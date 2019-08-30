@@ -2,9 +2,9 @@
 Contributors: hitenchothani3493
 Tags: clap, applaud, medium, feedback
 Requires at least: 4.0
-Tested up to: 5.1.1
+Tested up to: 5.2.2
 Requires PHP: 5.4.4
-Stable tag: 4.3
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -48,6 +48,10 @@ The WP Applaud plugin installs and activates like any other WordPress plugin
 = Which theme is it compatible with? =
  
 It is compatible with all theme. As it adds applaud icon after content.
+
+= Where do I find Statistics? =
+ 
+You can view top 10 applauded posts on meta box in dashboard (/wp-admin/).
  
  
 == Screenshots ==
@@ -57,11 +61,17 @@ It is compatible with all theme. As it adds applaud icon after content.
 3. Frontend applauded
 
 == Changelog ==
- 
-= 1.0 =
-* Initial release
+
+= 1.5 =
+* NEW:
+* * Add Applaud statistics to dashboard
+* FIX:
+* * Applaud triggering more than single user limit
 
 = 1.3 =
 * NEW:
 * * Add setting at individual posts/page to exclude applaud functionality
 * * Added gutenberg support for exclude functionality
+
+= 1.0 =
+* Initial release

@@ -4,6 +4,8 @@ jQuery(function($) {
 
     var user_likes = wp_applaud.user_likes;
 
+    if (link.hasClass('processing')) return false;
+
     if (link.hasClass('active')) return false;
 
     var id = $(this).attr('id'),
@@ -20,12 +22,16 @@ jQuery(function($) {
       xhrFields: { 
         withCredentials: true, 
       },
+      beforeSend: function() {
+        link.addClass('processing');
+      },
       success: function(data) {
         var res_data = jQuery.parseJSON(data);
+        link.removeClass('processing');
         link.html(res_data.html);
         link.attr('title', res_data.title);
         if(res_data.user_likes >= user_likes) {
-          link.addClass('active')
+          link.addClass('active');
         }
       },
     });

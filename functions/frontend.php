@@ -70,7 +70,6 @@ class wpApplaud {
 	
 	function ajax_callback($post_id) 
 	{
-
 		$options = get_option( 'wp_applaud_settings' );
 		if( !isset($options['add_to_posts']) ) $options['add_to_posts'] = '0';
 		if( !isset($options['add_to_pages']) ) $options['add_to_pages'] = '0';

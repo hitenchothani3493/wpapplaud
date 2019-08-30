@@ -2,8 +2,8 @@
 /*
 Plugin Name: WP Applaud
 Plugin URI: http://wpapplaud.com
-Description: Add "like" functionality to your posts and pages
-Version: 1.3
+Description: Add "applaud" functionality to your posts and pages
+Version: 1.5
 Author: WP Applaud
 Author URI: http://wpapplaud.com
 */
@@ -35,6 +35,12 @@ new wpApplaud();
 */
 require_once(__DIR__.'/functions/widgets.php');
 new wpApplaudWidgetsRegister();
+
+/*
+ * Include Dashboard Widget for wp_applaud
+*/
+require_once(__DIR__.'/functions/dashboard-widgets.php');
+new wpApplaudDashboardWidgetsRegister();
 
 /*
  * Function call for template use
